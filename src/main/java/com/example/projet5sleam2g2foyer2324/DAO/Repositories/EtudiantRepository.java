@@ -2,9 +2,11 @@ package com.example.projet5sleam2g2foyer2324.DAO.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import tn.esprit.spring.DAO.Entities.Etudiant;
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+
 
 public interface EtudiantRepository extends JpaRepository<Etudiant,Long> {
     //select * from Etudiant where cin=... 

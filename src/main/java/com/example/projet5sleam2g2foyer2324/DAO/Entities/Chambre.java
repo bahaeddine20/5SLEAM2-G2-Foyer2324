@@ -1,5 +1,4 @@
 package com.example.projet5sleam2g2foyer2324.DAO.Entities;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
