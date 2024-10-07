@@ -1,4 +1,5 @@
-package com.example.projet5sleam2g2foyer2324.DAO.Entities;
+package tn.esprit.spring.DAO.Entities;
+
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
