@@ -1,13 +1,10 @@
-package tn.esprit.spring.Services.Bloc;
+package com.example.projet5sleam2g2foyer2324.Services.Bloc;
 
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.DAO.Repositories.*;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Bloc;
-import tn.esprit.spring.DAO.Entities.Chambre;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Repositories.BlocRepository;
-import tn.esprit.spring.DAO.Repositories.ChambreRepository;
-import tn.esprit.spring.DAO.Repositories.FoyerRepository;
+
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,7 @@
-package tn.esprit.spring.Services.Bloc;
+package com.example.projet5sleam2g2foyer2324.Services.Bloc;
 
-import tn.esprit.spring.DAO.Entities.Bloc;
+
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
 
 import java.util.List;
 

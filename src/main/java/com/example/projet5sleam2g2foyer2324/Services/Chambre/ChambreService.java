@@ -1,14 +1,10 @@
-package tn.esprit.spring.Services.Chambre;
+package com.example.projet5sleam2g2foyer2324.Services.Chambre;
 
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.DAO.Repositories.*;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Bloc;
-import tn.esprit.spring.DAO.Entities.Chambre;
-import tn.esprit.spring.DAO.Entities.Reservation;
-import tn.esprit.spring.DAO.Entities.TypeChambre;
-import tn.esprit.spring.DAO.Repositories.BlocRepository;
-import tn.esprit.spring.DAO.Repositories.ChambreRepository;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

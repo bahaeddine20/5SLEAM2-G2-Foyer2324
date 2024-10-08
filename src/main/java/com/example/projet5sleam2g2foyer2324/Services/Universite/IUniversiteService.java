@@ -1,7 +1,12 @@
-package tn.esprit.spring.Services.Universite;
+package com.example.projet5sleam2g2foyer2324.Services.Universite;
 
-import tn.esprit.spring.DAO.Entities.Universite;
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.DAO.Repositories.*;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IUniversiteService {

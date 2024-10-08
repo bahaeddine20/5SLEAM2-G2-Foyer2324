@@ -1,8 +1,9 @@
-package tn.esprit.spring.DAO.Repositories;
+package com.example.projet5sleam2g2foyer2324.DAO.Repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.TypeChambre;
+import org.springframework.data.jpa.repository.Query;
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 

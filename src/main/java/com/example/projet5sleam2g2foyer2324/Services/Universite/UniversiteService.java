@@ -1,12 +1,13 @@
-package tn.esprit.spring.Services.Universite;
+package com.example.projet5sleam2g2foyer2324.Services.Universite;
 
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.DAO.Repositories.*;
+import com.example.projet5sleam2g2foyer2324.Services.Universite.IUniversiteService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Universite;
-import tn.esprit.spring.DAO.Repositories.FoyerRepository;
-import tn.esprit.spring.DAO.Repositories.UniversiteRepository;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 @Service

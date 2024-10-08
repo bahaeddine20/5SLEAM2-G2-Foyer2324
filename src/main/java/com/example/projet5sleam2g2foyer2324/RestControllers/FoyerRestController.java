@@ -1,12 +1,9 @@
-package tn.esprit.spring.RestControllers;
+package com.example.projet5sleam2g2foyer2324.RestControllers;
 
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.Services.Foyer.*;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.spring.DAO.Entities.Etudiant;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Universite;
-import tn.esprit.spring.Services.Etudiant.IEtudiantService;
-import tn.esprit.spring.Services.Foyer.IFoyerService;
 
 import java.util.List;
 

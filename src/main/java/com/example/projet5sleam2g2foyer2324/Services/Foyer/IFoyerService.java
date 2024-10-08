@@ -1,10 +1,12 @@
-package tn.esprit.spring.Services.Foyer;
+package com.example.projet5sleam2g2foyer2324.Services.Foyer;
 
-import tn.esprit.spring.DAO.Entities.Etudiant;
-import tn.esprit.spring.DAO.Entities.Foyer;
-import tn.esprit.spring.DAO.Entities.Reservation;
-import tn.esprit.spring.DAO.Entities.Universite;
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.DAO.Repositories.*;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 
+
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IFoyerService {

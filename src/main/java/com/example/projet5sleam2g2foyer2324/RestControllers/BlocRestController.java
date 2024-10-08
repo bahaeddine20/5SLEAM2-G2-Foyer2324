@@ -1,9 +1,9 @@
-package tn.esprit.spring.RestControllers;
+package com.example.projet5sleam2g2foyer2324.RestControllers;
 
+import com.example.projet5sleam2g2foyer2324.DAO.Entities.*;
+import com.example.projet5sleam2g2foyer2324.Services.Bloc.*;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import tn.esprit.spring.DAO.Entities.Bloc;
-import tn.esprit.spring.Services.Bloc.IBlocService;
 
 import java.util.List;
 
