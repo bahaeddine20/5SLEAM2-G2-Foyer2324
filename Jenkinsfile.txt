@@ -1,0 +1,63 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                // Cloning the repository
+                git url: 'https://github.com/bahaeddine20/5SLEAM2-G2-Foyer2324', branch: 'UserGestion'
+            }
+        }
+
+        stage('Validate') {
+            steps {
+                // Maven validate phase
+                sh 'mvn validate'
+            }
+        }
+
+        stage('Compile') {
+            steps {
+                // Maven compile phase
+                sh 'mvn compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Maven test phase
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package') {
+            steps {
+                // Maven package phase
+                sh 'mvn package'
+            }
+        }
+
+        stage('Verify') {
+            steps {
+                // Maven verify phase
+                sh 'mvn verify'
+            }
+        }
+
+        stage('Install') {
+            steps {
+                // Maven install phase
+                sh 'mvn install'
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Build completed successfully!'
+        }
+        failure {
+            echo 'Build failed!'
+        }
+    }
+}
