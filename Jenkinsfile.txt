@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    environment {
+        // Define SonarQube environment variables
+        SONAR_SCANNER_HOME = tool name: 'SonarQubeScanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+        SONAR_HOST_URL = 'http://localhost:9000'  // SonarQube default local URL
+        SONAR_AUTH_TOKEN = credentials('5sleam2G2Foyer')  // Use credentials from Jenkins
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
@@ -34,6 +41,37 @@ pipeline {
             steps {
                 // Maven package phase
                 sh 'mvn package'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                script {
+                    // Run the SonarQube scanner
+                    withSonarQubeEnv('SonarQubeScanner') {  // Ensure this matches the name in your SonarQube server configuration
+                        sh """
+                            ${SONAR_SCANNER_HOME}/bin/sonar-scanner \
+                            -Dsonar.projectKey=5sleam2G2Foyer \
+                            -Dsonar.sources=. \
+                            -Dsonar.host.url=${SONAR_HOST_URL} \
+                            -Dsonar.login=${SONAR_AUTH_TOKEN}
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Quality Gate') {
+            steps {
+                script {
+                    // Wait for SonarQube quality gate result
+                    timeout(time: 1, unit: 'HOURS') {
+                        def qualityGate = waitForQualityGate()
+                        if (qualityGate.status != 'OK') {
+                            error "Pipeline aborted due to quality gate failure: ${qualityGate.status}"
+                        }
+                    }
+                }
             }
         }
 
